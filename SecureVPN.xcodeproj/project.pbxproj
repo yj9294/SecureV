@@ -1,0 +1,1053 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1199D0922BE0F38D00D75A53 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1199D0912BE0F38D00D75A53 /* AdSupport.framework */; };
+		11AEA0172BE0DEEB00B3BDAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11AEA0162BE0DEEB00B3BDAC /* GoogleService-Info.plist */; };
+		11C0A0CF2BAAE86F0081889F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A0CE2BAAE86F0081889F /* AppDelegate.m */; };
+		11C0A0D22BAAE86F0081889F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A0D12BAAE86F0081889F /* SceneDelegate.m */; };
+		11C0A0DA2BAAE8700081889F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11C0A0D92BAAE8700081889F /* Assets.xcassets */; };
+		11C0A0DD2BAAE8700081889F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 11C0A0DC2BAAE8700081889F /* Base */; };
+		11C0A0E02BAAE8700081889F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A0DF2BAAE8700081889F /* main.m */; };
+		11C0A0ED2BAAED460081889F /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C0A0EC2BAAED460081889F /* NetworkExtension.framework */; };
+		11C0A0F12BAAED460081889F /* PacketTunnelProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A0F02BAAED460081889F /* PacketTunnelProvider.m */; };
+		11C0A0F62BAAED460081889F /* Tunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 11C0A0EA2BAAED460081889F /* Tunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		11C0A1082BAAF00D0081889F /* SVAdInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A0FE2BAAF00D0081889F /* SVAdInfoModel.m */; };
+		11C0A1092BAAF00D0081889F /* SVFbHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1002BAAF00D0081889F /* SVFbHandle.m */; };
+		11C0A10A2BAAF00D0081889F /* SVPosterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1022BAAF00D0081889F /* SVPosterManager.m */; };
+		11C0A10B2BAAF00D0081889F /* SVPosterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1042BAAF00D0081889F /* SVPosterModel.m */; };
+		11C0A10C2BAAF00D0081889F /* SVStatisticAnalysis.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1062BAAF00D0081889F /* SVStatisticAnalysis.m */; };
+		11C0A15B2BAAF02F0081889F /* SVBrowserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A10E2BAAF02F0081889F /* SVBrowserVC.m */; };
+		11C0A15C2BAAF02F0081889F /* SVConnectResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1102BAAF02F0081889F /* SVConnectResultVC.m */; };
+		11C0A15D2BAAF02F0081889F /* SVHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1122BAAF02F0081889F /* SVHomeVC.m */; };
+		11C0A15E2BAAF02F0081889F /* SVLaunchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1142BAAF02F0081889F /* SVLaunchVC.m */; };
+		11C0A15F2BAAF02F0081889F /* SVMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1162BAAF02F0081889F /* SVMapVC.m */; };
+		11C0A1602BAAF02F0081889F /* SVServerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1182BAAF02F0081889F /* SVServerVC.m */; };
+		11C0A1612BAAF02F0081889F /* SVWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A11A2BAAF02F0081889F /* SVWebVC.m */; };
+		11C0A1622BAAF02F0081889F /* SVNetInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A11D2BAAF02F0081889F /* SVNetInfoModel.m */; };
+		11C0A1632BAAF02F0081889F /* SVServerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A11F2BAAF02F0081889F /* SVServerModel.m */; };
+		11C0A1642BAAF02F0081889F /* SVDbAdvertHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1222BAAF02F0081889F /* SVDbAdvertHandle.m */; };
+		11C0A1652BAAF02F0081889F /* SVPoolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1242BAAF02F0081889F /* SVPoolManager.m */; };
+		11C0A1662BAAF02F0081889F /* BHBNetworkSpeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1272BAAF02F0081889F /* BHBNetworkSpeed.m */; };
+		11C0A1672BAAF02F0081889F /* LottieTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1292BAAF02F0081889F /* LottieTools.swift */; };
+		11C0A1682BAAF02F0081889F /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C0A12A2BAAF02F0081889F /* NativeAdView.xib */; };
+		11C0A1692BAAF02F0081889F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A12C2BAAF02F0081889F /* Reachability.m */; };
+		11C0A16A2BAAF02F0081889F /* SVTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A12F2BAAF02F0081889F /* SVTools.m */; };
+		11C0A16B2BAAF02F0081889F /* secure.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 11C0A1312BAAF02F0081889F /* secure.ovpn */; };
+		11C0A16C2BAAF02F0081889F /* SVNLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1342BAAF02F0081889F /* SVNLog.m */; };
+		11C0A16D2BAAF02F0081889F /* SVNManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1362BAAF02F0081889F /* SVNManager.m */; };
+		11C0A16E2BAAF02F0081889F /* SVNProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1382BAAF02F0081889F /* SVNProfile.m */; };
+		11C0A16F2BAAF02F0081889F /* SVNTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A13A2BAAF02F0081889F /* SVNTools.m */; };
+		11C0A1702BAAF02F0081889F /* SVHomeBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A13D2BAAF02F0081889F /* SVHomeBarView.m */; };
+		11C0A1712BAAF02F0081889F /* SVHomePop.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A13F2BAAF02F0081889F /* SVHomePop.m */; };
+		11C0A1722BAAF02F0081889F /* SVMapInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1412BAAF02F0081889F /* SVMapInfoView.m */; };
+		11C0A1732BAAF02F0081889F /* SVPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1432BAAF02F0081889F /* SVPop.m */; };
+		11C0A1742BAAF02F0081889F /* SVSecurePrivacyPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1452BAAF02F0081889F /* SVSecurePrivacyPop.m */; };
+		11C0A1752BAAF02F0081889F /* NSObject+SV.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1482BAAF02F0081889F /* NSObject+SV.m */; };
+		11C0A1762BAAF02F0081889F /* NSString+SV.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A14A2BAAF02F0081889F /* NSString+SV.m */; };
+		11C0A1772BAAF02F0081889F /* SVBaseNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A14C2BAAF02F0081889F /* SVBaseNC.m */; };
+		11C0A1782BAAF0300081889F /* SVBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A14E2BAAF02F0081889F /* SVBaseVC.m */; };
+		11C0A1792BAAF0300081889F /* SVNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1512BAAF02F0081889F /* SVNavigationView.m */; };
+		11C0A17A2BAAF0300081889F /* SVTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1532BAAF02F0081889F /* SVTextField.m */; };
+		11C0A17B2BAAF0300081889F /* SVUITools.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1552BAAF02F0081889F /* SVUITools.m */; };
+		11C0A17C2BAAF0300081889F /* UIButton+SV.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1572BAAF02F0081889F /* UIButton+SV.m */; };
+		11C0A17D2BAAF0300081889F /* UIView+SV.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1592BAAF02F0081889F /* UIView+SV.m */; };
+		11C0A1832BAAF0510081889F /* launch.json in Resources */ = {isa = PBXBuildFile; fileRef = 11C0A17F2BAAF0510081889F /* launch.json */; };
+		11C0A1852BAAF0510081889F /* SVLaunchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1822BAAF0510081889F /* SVLaunchManager.m */; };
+		11C0A18B2BAAF3B30081889F /* SVNLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1882BAAF3B30081889F /* SVNLog.m */; };
+		11C0A1972BAAFDC70081889F /* SecureVPN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1952BAAFDC70081889F /* SecureVPN.xcdatamodeld */; };
+		11C0A1A02BAB03250081889F /* remote_config_defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11C0A19F2BAB03250081889F /* remote_config_defaults.plist */; };
+		11C0A1A22BAB096F0081889F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 11C0A1A12BAB096F0081889F /* PrivacyInfo.xcprivacy */; };
+		2AF7097F26B7536E1C6EAC63 /* Pods_Tunnel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B2C75C35D2A5BE04296D65 /* Pods_Tunnel.framework */; };
+		A9140327EEFAA2FB30CBD4F3 /* Pods_SecureVPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56A7074A795987ADA782B18 /* Pods_SecureVPN.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11C0A0F42BAAED460081889F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11C0A0C22BAAE86F0081889F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11C0A0E92BAAED460081889F;
+			remoteInfo = Tunnel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		11C0A0FA2BAAED460081889F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				11C0A0F62BAAED460081889F /* Tunnel.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1199D0912BE0F38D00D75A53 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		11AEA0162BE0DEEB00B3BDAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		11C0A0CA2BAAE86F0081889F /* SecureVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11C0A0CD2BAAE86F0081889F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		11C0A0CE2BAAE86F0081889F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		11C0A0D02BAAE86F0081889F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		11C0A0D12BAAE86F0081889F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		11C0A0D92BAAE8700081889F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11C0A0DC2BAAE8700081889F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		11C0A0DE2BAAE8700081889F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11C0A0DF2BAAE8700081889F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		11C0A0EA2BAAED460081889F /* Tunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Tunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		11C0A0EC2BAAED460081889F /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		11C0A0EF2BAAED460081889F /* PacketTunnelProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketTunnelProvider.h; sourceTree = "<group>"; };
+		11C0A0F02BAAED460081889F /* PacketTunnelProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PacketTunnelProvider.m; sourceTree = "<group>"; };
+		11C0A0F22BAAED460081889F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11C0A0F32BAAED460081889F /* Tunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tunnel.entitlements; sourceTree = "<group>"; };
+		11C0A0FC2BAAF00D0081889F /* SVAdAllType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVAdAllType.h; sourceTree = "<group>"; };
+		11C0A0FD2BAAF00D0081889F /* SVAdInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVAdInfoModel.h; sourceTree = "<group>"; };
+		11C0A0FE2BAAF00D0081889F /* SVAdInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVAdInfoModel.m; sourceTree = "<group>"; };
+		11C0A0FF2BAAF00D0081889F /* SVFbHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVFbHandle.h; sourceTree = "<group>"; };
+		11C0A1002BAAF00D0081889F /* SVFbHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVFbHandle.m; sourceTree = "<group>"; };
+		11C0A1012BAAF00D0081889F /* SVPosterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPosterManager.h; sourceTree = "<group>"; };
+		11C0A1022BAAF00D0081889F /* SVPosterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVPosterManager.m; sourceTree = "<group>"; };
+		11C0A1032BAAF00D0081889F /* SVPosterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPosterModel.h; sourceTree = "<group>"; };
+		11C0A1042BAAF00D0081889F /* SVPosterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVPosterModel.m; sourceTree = "<group>"; };
+		11C0A1052BAAF00D0081889F /* SVStatisticAnalysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVStatisticAnalysis.h; sourceTree = "<group>"; };
+		11C0A1062BAAF00D0081889F /* SVStatisticAnalysis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVStatisticAnalysis.m; sourceTree = "<group>"; };
+		11C0A10D2BAAF02F0081889F /* SVBrowserVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVBrowserVC.h; sourceTree = "<group>"; };
+		11C0A10E2BAAF02F0081889F /* SVBrowserVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVBrowserVC.m; sourceTree = "<group>"; };
+		11C0A10F2BAAF02F0081889F /* SVConnectResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVConnectResultVC.h; sourceTree = "<group>"; };
+		11C0A1102BAAF02F0081889F /* SVConnectResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVConnectResultVC.m; sourceTree = "<group>"; };
+		11C0A1112BAAF02F0081889F /* SVHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHomeVC.h; sourceTree = "<group>"; };
+		11C0A1122BAAF02F0081889F /* SVHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVHomeVC.m; sourceTree = "<group>"; };
+		11C0A1132BAAF02F0081889F /* SVLaunchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVLaunchVC.h; sourceTree = "<group>"; };
+		11C0A1142BAAF02F0081889F /* SVLaunchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVLaunchVC.m; sourceTree = "<group>"; };
+		11C0A1152BAAF02F0081889F /* SVMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVMapVC.h; sourceTree = "<group>"; };
+		11C0A1162BAAF02F0081889F /* SVMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVMapVC.m; sourceTree = "<group>"; };
+		11C0A1172BAAF02F0081889F /* SVServerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVServerVC.h; sourceTree = "<group>"; };
+		11C0A1182BAAF02F0081889F /* SVServerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVServerVC.m; sourceTree = "<group>"; };
+		11C0A1192BAAF02F0081889F /* SVWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebVC.h; sourceTree = "<group>"; };
+		11C0A11A2BAAF02F0081889F /* SVWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebVC.m; sourceTree = "<group>"; };
+		11C0A11C2BAAF02F0081889F /* SVNetInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNetInfoModel.h; sourceTree = "<group>"; };
+		11C0A11D2BAAF02F0081889F /* SVNetInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNetInfoModel.m; sourceTree = "<group>"; };
+		11C0A11E2BAAF02F0081889F /* SVServerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVServerModel.h; sourceTree = "<group>"; };
+		11C0A11F2BAAF02F0081889F /* SVServerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVServerModel.m; sourceTree = "<group>"; };
+		11C0A1212BAAF02F0081889F /* SVDbAdvertHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVDbAdvertHandle.h; sourceTree = "<group>"; };
+		11C0A1222BAAF02F0081889F /* SVDbAdvertHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVDbAdvertHandle.m; sourceTree = "<group>"; };
+		11C0A1232BAAF02F0081889F /* SVPoolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPoolManager.h; sourceTree = "<group>"; };
+		11C0A1242BAAF02F0081889F /* SVPoolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVPoolManager.m; sourceTree = "<group>"; };
+		11C0A1262BAAF02F0081889F /* BHBNetworkSpeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHBNetworkSpeed.h; sourceTree = "<group>"; };
+		11C0A1272BAAF02F0081889F /* BHBNetworkSpeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHBNetworkSpeed.m; sourceTree = "<group>"; };
+		11C0A1282BAAF02F0081889F /* GADNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADNativeAd.h; sourceTree = "<group>"; };
+		11C0A1292BAAF02F0081889F /* LottieTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieTools.swift; sourceTree = "<group>"; };
+		11C0A12A2BAAF02F0081889F /* NativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
+		11C0A12B2BAAF02F0081889F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		11C0A12C2BAAF02F0081889F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		11C0A12D2BAAF02F0081889F /* SecureVPN-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SecureVPN-Bridging-Header.h"; sourceTree = "<group>"; };
+		11C0A12E2BAAF02F0081889F /* SVTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTools.h; sourceTree = "<group>"; };
+		11C0A12F2BAAF02F0081889F /* SVTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTools.m; sourceTree = "<group>"; };
+		11C0A1312BAAF02F0081889F /* secure.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = secure.ovpn; sourceTree = "<group>"; };
+		11C0A1322BAAF02F0081889F /* SVNConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNConfig.h; sourceTree = "<group>"; };
+		11C0A1332BAAF02F0081889F /* SVNLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNLog.h; sourceTree = "<group>"; };
+		11C0A1342BAAF02F0081889F /* SVNLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNLog.m; sourceTree = "<group>"; };
+		11C0A1352BAAF02F0081889F /* SVNManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNManager.h; sourceTree = "<group>"; };
+		11C0A1362BAAF02F0081889F /* SVNManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNManager.m; sourceTree = "<group>"; };
+		11C0A1372BAAF02F0081889F /* SVNProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNProfile.h; sourceTree = "<group>"; };
+		11C0A1382BAAF02F0081889F /* SVNProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNProfile.m; sourceTree = "<group>"; };
+		11C0A1392BAAF02F0081889F /* SVNTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNTools.h; sourceTree = "<group>"; };
+		11C0A13A2BAAF02F0081889F /* SVNTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNTools.m; sourceTree = "<group>"; };
+		11C0A13C2BAAF02F0081889F /* SVHomeBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHomeBarView.h; sourceTree = "<group>"; };
+		11C0A13D2BAAF02F0081889F /* SVHomeBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVHomeBarView.m; sourceTree = "<group>"; };
+		11C0A13E2BAAF02F0081889F /* SVHomePop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHomePop.h; sourceTree = "<group>"; };
+		11C0A13F2BAAF02F0081889F /* SVHomePop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVHomePop.m; sourceTree = "<group>"; };
+		11C0A1402BAAF02F0081889F /* SVMapInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVMapInfoView.h; sourceTree = "<group>"; };
+		11C0A1412BAAF02F0081889F /* SVMapInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVMapInfoView.m; sourceTree = "<group>"; };
+		11C0A1422BAAF02F0081889F /* SVPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPop.h; sourceTree = "<group>"; };
+		11C0A1432BAAF02F0081889F /* SVPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVPop.m; sourceTree = "<group>"; };
+		11C0A1442BAAF02F0081889F /* SVSecurePrivacyPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSecurePrivacyPop.h; sourceTree = "<group>"; };
+		11C0A1452BAAF02F0081889F /* SVSecurePrivacyPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSecurePrivacyPop.m; sourceTree = "<group>"; };
+		11C0A1472BAAF02F0081889F /* NSObject+SV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SV.h"; sourceTree = "<group>"; };
+		11C0A1482BAAF02F0081889F /* NSObject+SV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SV.m"; sourceTree = "<group>"; };
+		11C0A1492BAAF02F0081889F /* NSString+SV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SV.h"; sourceTree = "<group>"; };
+		11C0A14A2BAAF02F0081889F /* NSString+SV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SV.m"; sourceTree = "<group>"; };
+		11C0A14B2BAAF02F0081889F /* SVBaseNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVBaseNC.h; sourceTree = "<group>"; };
+		11C0A14C2BAAF02F0081889F /* SVBaseNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVBaseNC.m; sourceTree = "<group>"; };
+		11C0A14D2BAAF02F0081889F /* SVBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVBaseVC.h; sourceTree = "<group>"; };
+		11C0A14E2BAAF02F0081889F /* SVBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVBaseVC.m; sourceTree = "<group>"; };
+		11C0A14F2BAAF02F0081889F /* SVConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVConstant.h; sourceTree = "<group>"; };
+		11C0A1502BAAF02F0081889F /* SVNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVNavigationView.h; sourceTree = "<group>"; };
+		11C0A1512BAAF02F0081889F /* SVNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVNavigationView.m; sourceTree = "<group>"; };
+		11C0A1522BAAF02F0081889F /* SVTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTextField.h; sourceTree = "<group>"; };
+		11C0A1532BAAF02F0081889F /* SVTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTextField.m; sourceTree = "<group>"; };
+		11C0A1542BAAF02F0081889F /* SVUITools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVUITools.h; sourceTree = "<group>"; };
+		11C0A1552BAAF02F0081889F /* SVUITools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVUITools.m; sourceTree = "<group>"; };
+		11C0A1562BAAF02F0081889F /* UIButton+SV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SV.h"; sourceTree = "<group>"; };
+		11C0A1572BAAF02F0081889F /* UIButton+SV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SV.m"; sourceTree = "<group>"; };
+		11C0A1582BAAF02F0081889F /* UIView+SV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SV.h"; sourceTree = "<group>"; };
+		11C0A1592BAAF02F0081889F /* UIView+SV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SV.m"; sourceTree = "<group>"; };
+		11C0A17E2BAAF0510081889F /* SVLaunchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVLaunchManager.h; sourceTree = "<group>"; };
+		11C0A17F2BAAF0510081889F /* launch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = launch.json; sourceTree = "<group>"; };
+		11C0A1802BAAF0510081889F /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		11C0A1822BAAF0510081889F /* SVLaunchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVLaunchManager.m; sourceTree = "<group>"; };
+		11C0A1862BAAF0E20081889F /* SecureVPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SecureVPN.entitlements; sourceTree = "<group>"; };
+		11C0A1882BAAF3B30081889F /* SVNLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVNLog.m; path = SecureVPN/vpn/SVNLog.m; sourceTree = SOURCE_ROOT; };
+		11C0A1892BAAF3B30081889F /* SVNConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVNConfig.h; path = SecureVPN/vpn/SVNConfig.h; sourceTree = SOURCE_ROOT; };
+		11C0A18A2BAAF3B30081889F /* SVNLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVNLog.h; path = SecureVPN/vpn/SVNLog.h; sourceTree = SOURCE_ROOT; };
+		11C0A1962BAAFDC70081889F /* SecureVPN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecureVPN.xcdatamodel; sourceTree = "<group>"; };
+		11C0A19E2BAB026E0081889F /* NEPacketTunnelFlow+TMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NEPacketTunnelFlow+TMExtension.h"; sourceTree = "<group>"; };
+		11C0A19F2BAB03250081889F /* remote_config_defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = remote_config_defaults.plist; sourceTree = "<group>"; };
+		11C0A1A12BAB096F0081889F /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		6FE5D2B2F6F0B9E18CDE3CCB /* Pods-SecureVPN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecureVPN.release.xcconfig"; path = "Target Support Files/Pods-SecureVPN/Pods-SecureVPN.release.xcconfig"; sourceTree = "<group>"; };
+		83B2C75C35D2A5BE04296D65 /* Pods_Tunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tunnel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FBC1A4333FEB7FDCAF36AAD /* Pods-Tunnel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tunnel.debug.xcconfig"; path = "Target Support Files/Pods-Tunnel/Pods-Tunnel.debug.xcconfig"; sourceTree = "<group>"; };
+		C56A7074A795987ADA782B18 /* Pods_SecureVPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecureVPN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7390584FB91C50A368F913E /* Pods-SecureVPN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecureVPN.debug.xcconfig"; path = "Target Support Files/Pods-SecureVPN/Pods-SecureVPN.debug.xcconfig"; sourceTree = "<group>"; };
+		F3327226960670F9A5832470 /* Pods-Tunnel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tunnel.release.xcconfig"; path = "Target Support Files/Pods-Tunnel/Pods-Tunnel.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11C0A0C72BAAE86F0081889F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9140327EEFAA2FB30CBD4F3 /* Pods_SecureVPN.framework in Frameworks */,
+				1199D0922BE0F38D00D75A53 /* AdSupport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11C0A0E72BAAED460081889F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11C0A0ED2BAAED460081889F /* NetworkExtension.framework in Frameworks */,
+				2AF7097F26B7536E1C6EAC63 /* Pods_Tunnel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11C0A0C12BAAE86F0081889F = {
+			isa = PBXGroup;
+			children = (
+				11C0A0CC2BAAE86F0081889F /* SecureVPN */,
+				11C0A0EE2BAAED460081889F /* Tunnel */,
+				11C0A0EB2BAAED460081889F /* Frameworks */,
+				11C0A0CB2BAAE86F0081889F /* Products */,
+				4D1017F20B71A1D7DAAC16A5 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		11C0A0CB2BAAE86F0081889F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11C0A0CA2BAAE86F0081889F /* SecureVPN.app */,
+				11C0A0EA2BAAED460081889F /* Tunnel.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11C0A0CC2BAAE86F0081889F /* SecureVPN */ = {
+			isa = PBXGroup;
+			children = (
+				11C0A1862BAAF0E20081889F /* SecureVPN.entitlements */,
+				11AEA0162BE0DEEB00B3BDAC /* GoogleService-Info.plist */,
+				11C0A19F2BAB03250081889F /* remote_config_defaults.plist */,
+				11C0A0CD2BAAE86F0081889F /* AppDelegate.h */,
+				11C0A0CE2BAAE86F0081889F /* AppDelegate.m */,
+				11C0A0D02BAAE86F0081889F /* SceneDelegate.h */,
+				11C0A0D12BAAE86F0081889F /* SceneDelegate.m */,
+				11C0A17F2BAAF0510081889F /* launch.json */,
+				11C0A1802BAAF0510081889F /* PrefixHeader.pch */,
+				11C0A17E2BAAF0510081889F /* SVLaunchManager.h */,
+				11C0A1822BAAF0510081889F /* SVLaunchManager.m */,
+				11C0A1A12BAB096F0081889F /* PrivacyInfo.xcprivacy */,
+				11C0A1252BAAF02F0081889F /* database */,
+				11C0A1202BAAF02F0081889F /* model */,
+				11C0A1302BAAF02F0081889F /* tool */,
+				11C0A15A2BAAF02F0081889F /* uitool */,
+				11C0A11B2BAAF02F0081889F /* vc */,
+				11C0A1462BAAF02F0081889F /* view */,
+				11C0A13B2BAAF02F0081889F /* vpn */,
+				11C0A1072BAAF00D0081889F /* advert */,
+				11C0A0D92BAAE8700081889F /* Assets.xcassets */,
+				11C0A0DB2BAAE8700081889F /* LaunchScreen.storyboard */,
+				11C0A0DE2BAAE8700081889F /* Info.plist */,
+				11C0A0DF2BAAE8700081889F /* main.m */,
+				11C0A1952BAAFDC70081889F /* SecureVPN.xcdatamodeld */,
+			);
+			path = SecureVPN;
+			sourceTree = "<group>";
+		};
+		11C0A0EB2BAAED460081889F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1199D0912BE0F38D00D75A53 /* AdSupport.framework */,
+				11C0A0EC2BAAED460081889F /* NetworkExtension.framework */,
+				C56A7074A795987ADA782B18 /* Pods_SecureVPN.framework */,
+				83B2C75C35D2A5BE04296D65 /* Pods_Tunnel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11C0A0EE2BAAED460081889F /* Tunnel */ = {
+			isa = PBXGroup;
+			children = (
+				11C0A1872BAAF36E0081889F /* vpn */,
+				11C0A0EF2BAAED460081889F /* PacketTunnelProvider.h */,
+				11C0A0F02BAAED460081889F /* PacketTunnelProvider.m */,
+				11C0A19E2BAB026E0081889F /* NEPacketTunnelFlow+TMExtension.h */,
+				11C0A0F22BAAED460081889F /* Info.plist */,
+				11C0A0F32BAAED460081889F /* Tunnel.entitlements */,
+			);
+			path = Tunnel;
+			sourceTree = "<group>";
+		};
+		11C0A1072BAAF00D0081889F /* advert */ = {
+			isa = PBXGroup;
+			children = (
+				11C0A0FC2BAAF00D0081889F /* SVAdAllType.h */,
+				11C0A0FD2BAAF00D0081889F /* SVAdInfoModel.h */,
+				11C0A0FE2BAAF00D0081889F /* SVAdInfoModel.m */,
+				11C0A0FF2BAAF00D0081889F /* SVFbHandle.h */,
+				11C0A1002BAAF00D0081889F /* SVFbHandle.m */,
+				11C0A1012BAAF00D0081889F /* SVPosterManager.h */,
+				11C0A1022BAAF00D0081889F /* SVPosterManager.m */,
+				11C0A1032BAAF00D0081889F /* SVPosterModel.h */,
+				11C0A1042BAAF00D0081889F /* SVPosterModel.m */,
+				11C0A1052BAAF00D0081889F /* SVStatisticAnalysis.h */,
+				11C0A1062BAAF00D0081889F /* SVStatisticAnalysis.m */,
+			);
+			path = advert;
+			sourceTree = "<group>";
+		};
+		11C0A11B2BAAF02F0081889F /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				11C0A10D2BAAF02F0081889F /* SVBrowserVC.h */,
+				11C0A10E2BAAF02F0081889F /* SVBrowserVC.m */,
+				11C0A10F2BAAF02F0081889F /* SVConnectResultVC.h */,
+				11C0A1102BAAF02F0081889F /* SVConnectResultVC.m */,
+				11C0A1112BAAF02F0081889F /* SVHomeVC.h */,
+				11C0A1122BAAF02F0081889F /* SVHomeVC.m */,
+				11C0A1132BAAF02F0081889F /* SVLaunchVC.h */,
+				11C0A1142BAAF02F0081889F /* SVLaunchVC.m */,
+				11C0A1152BAAF02F0081889F /* SVMapVC.h */,
+				11C0A1162BAAF02F0081889F /* SVMapVC.m */,
+				11C0A1172BAAF02F0081889F /* SVServerVC.h */,
+				11C0A1182BAAF02F0081889F /* SVServerVC.m */,
+				11C0A1192BAAF02F0081889F /* SVWebVC.h */,
+				11C0A11A2BAAF02F0081889F /* SVWebVC.m */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		11C0A1202BAAF02F0081889F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				11C0A11C2BAAF02F0081889F /* SVNetInfoModel.h */,
+				11C0A11D2BAAF02F0081889F /* SVNetInfoModel.m */,
+				11C0A11E2BAAF02F0081889F /* SVServerModel.h */,
+				11C0A11F2BAAF02F0081889F /* SVServerModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		11C0A1252BAAF02F0081889F /* database */ = {
+			isa = PBXGroup;
+			children = (
+				11C0A1212BAAF02F0081889F /* SVDbAdvertHandle.h */,
+				11C0A1222BAAF02F0081889F /* SVDbAdvertHandle.m */,
+				11C0A1232BAAF02F0081889F /* SVPoolManager.h */,
+				11C0A1242BAAF02F0081889F /* SVPoolManager.m */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
+		11C0A1302BAAF02F0081889F /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				11C0A1262BAAF02F0081889F /* BHBNetworkSpeed.h */,
+				11C0A1272BAAF02F0081889F /* BHBNetworkSpeed.m */,
+				11C0A1282BAAF02F0081889F /* GADNativeAd.h */,
+				11C0A1292BAAF02F0081889F /* LottieTools.swift */,
+				11C0A12A2BAAF02F0081889F /* NativeAdView.xib */,
+				11C0A12B2BAAF02F0081889F /* Reachability.h */,
+				11C0A12C2BAAF02F0081889F /* Reachability.m */,
+				11C0A12D2BAAF02F0081889F /* SecureVPN-Bridging-Header.h */,
+				11C0A12E2BAAF02F0081889F /* SVTools.h */,
+				11C0A12F2BAAF02F0081889F /* SVTools.m */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+		11C0A13B2BAAF02F0081889F /* vpn */ = {
+			isa = PBXGroup;
+			children = (
+				11C0A1312BAAF02F0081889F /* secure.ovpn */,
+				11C0A1322BAAF02F0081889F /* SVNConfig.h */,
+				11C0A1332BAAF02F0081889F /* SVNLog.h */,
+				11C0A1342BAAF02F0081889F /* SVNLog.m */,
+				11C0A1352BAAF02F0081889F /* SVNManager.h */,
+				11C0A1362BAAF02F0081889F /* SVNManager.m */,
+				11C0A1372BAAF02F0081889F /* SVNProfile.h */,
+				11C0A1382BAAF02F0081889F /* SVNProfile.m */,
+				11C0A1392BAAF02F0081889F /* SVNTools.h */,
+				11C0A13A2BAAF02F0081889F /* SVNTools.m */,
+			);
+			path = vpn;
+			sourceTree = "<group>";
+		};
+		11C0A1462BAAF02F0081889F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				11C0A13C2BAAF02F0081889F /* SVHomeBarView.h */,
+				11C0A13D2BAAF02F0081889F /* SVHomeBarView.m */,
+				11C0A13E2BAAF02F0081889F /* SVHomePop.h */,
+				11C0A13F2BAAF02F0081889F /* SVHomePop.m */,
+				11C0A1402BAAF02F0081889F /* SVMapInfoView.h */,
+				11C0A1412BAAF02F0081889F /* SVMapInfoView.m */,
+				11C0A1422BAAF02F0081889F /* SVPop.h */,
+				11C0A1432BAAF02F0081889F /* SVPop.m */,
+				11C0A1442BAAF02F0081889F /* SVSecurePrivacyPop.h */,
+				11C0A1452BAAF02F0081889F /* SVSecurePrivacyPop.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		11C0A15A2BAAF02F0081889F /* uitool */ = {
+			isa = PBXGroup;
+			children = (
+				11C0A1472BAAF02F0081889F /* NSObject+SV.h */,
+				11C0A1482BAAF02F0081889F /* NSObject+SV.m */,
+				11C0A1492BAAF02F0081889F /* NSString+SV.h */,
+				11C0A14A2BAAF02F0081889F /* NSString+SV.m */,
+				11C0A14B2BAAF02F0081889F /* SVBaseNC.h */,
+				11C0A14C2BAAF02F0081889F /* SVBaseNC.m */,
+				11C0A14D2BAAF02F0081889F /* SVBaseVC.h */,
+				11C0A14E2BAAF02F0081889F /* SVBaseVC.m */,
+				11C0A14F2BAAF02F0081889F /* SVConstant.h */,
+				11C0A1502BAAF02F0081889F /* SVNavigationView.h */,
+				11C0A1512BAAF02F0081889F /* SVNavigationView.m */,
+				11C0A1522BAAF02F0081889F /* SVTextField.h */,
+				11C0A1532BAAF02F0081889F /* SVTextField.m */,
+				11C0A1542BAAF02F0081889F /* SVUITools.h */,
+				11C0A1552BAAF02F0081889F /* SVUITools.m */,
+				11C0A1562BAAF02F0081889F /* UIButton+SV.h */,
+				11C0A1572BAAF02F0081889F /* UIButton+SV.m */,
+				11C0A1582BAAF02F0081889F /* UIView+SV.h */,
+				11C0A1592BAAF02F0081889F /* UIView+SV.m */,
+			);
+			path = uitool;
+			sourceTree = "<group>";
+		};
+		11C0A1872BAAF36E0081889F /* vpn */ = {
+			isa = PBXGroup;
+			children = (
+				11C0A1892BAAF3B30081889F /* SVNConfig.h */,
+				11C0A18A2BAAF3B30081889F /* SVNLog.h */,
+				11C0A1882BAAF3B30081889F /* SVNLog.m */,
+			);
+			path = vpn;
+			sourceTree = "<group>";
+		};
+		4D1017F20B71A1D7DAAC16A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7390584FB91C50A368F913E /* Pods-SecureVPN.debug.xcconfig */,
+				6FE5D2B2F6F0B9E18CDE3CCB /* Pods-SecureVPN.release.xcconfig */,
+				9FBC1A4333FEB7FDCAF36AAD /* Pods-Tunnel.debug.xcconfig */,
+				F3327226960670F9A5832470 /* Pods-Tunnel.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11C0A0C92BAAE86F0081889F /* SecureVPN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11C0A0E32BAAE8700081889F /* Build configuration list for PBXNativeTarget "SecureVPN" */;
+			buildPhases = (
+				C49BD587D0EDC15C7A573EC4 /* [CP] Check Pods Manifest.lock */,
+				11C0A0C62BAAE86F0081889F /* Sources */,
+				11C0A0C72BAAE86F0081889F /* Frameworks */,
+				11C0A0C82BAAE86F0081889F /* Resources */,
+				11C0A0FA2BAAED460081889F /* Embed Foundation Extensions */,
+				B58C0FF159EC7BD57F256744 /* [CP] Embed Pods Frameworks */,
+				CA087AFAC5134939839C6D65 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11C0A0F52BAAED460081889F /* PBXTargetDependency */,
+			);
+			name = SecureVPN;
+			productName = SecureVPN;
+			productReference = 11C0A0CA2BAAE86F0081889F /* SecureVPN.app */;
+			productType = "com.apple.product-type.application";
+		};
+		11C0A0E92BAAED460081889F /* Tunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11C0A0F72BAAED460081889F /* Build configuration list for PBXNativeTarget "Tunnel" */;
+			buildPhases = (
+				2F33DEECA19DA8A3D64E1ECF /* [CP] Check Pods Manifest.lock */,
+				11C0A0E62BAAED460081889F /* Sources */,
+				11C0A0E72BAAED460081889F /* Frameworks */,
+				11C0A0E82BAAED460081889F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tunnel;
+			productName = Tunnel;
+			productReference = 11C0A0EA2BAAED460081889F /* Tunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11C0A0C22BAAE86F0081889F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					11C0A0C92BAAE86F0081889F = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					11C0A0E92BAAED460081889F = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 11C0A0C52BAAE86F0081889F /* Build configuration list for PBXProject "SecureVPN" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11C0A0C12BAAE86F0081889F;
+			productRefGroup = 11C0A0CB2BAAE86F0081889F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11C0A0C92BAAE86F0081889F /* SecureVPN */,
+				11C0A0E92BAAED460081889F /* Tunnel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11C0A0C82BAAE86F0081889F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11C0A0DA2BAAE8700081889F /* Assets.xcassets in Resources */,
+				11AEA0172BE0DEEB00B3BDAC /* GoogleService-Info.plist in Resources */,
+				11C0A1A02BAB03250081889F /* remote_config_defaults.plist in Resources */,
+				11C0A1832BAAF0510081889F /* launch.json in Resources */,
+				11C0A1682BAAF02F0081889F /* NativeAdView.xib in Resources */,
+				11C0A0DD2BAAE8700081889F /* Base in Resources */,
+				11C0A16B2BAAF02F0081889F /* secure.ovpn in Resources */,
+				11C0A1A22BAB096F0081889F /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11C0A0E82BAAED460081889F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F33DEECA19DA8A3D64E1ECF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tunnel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B58C0FF159EC7BD57F256744 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SecureVPN/Pods-SecureVPN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SecureVPN/Pods-SecureVPN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SecureVPN/Pods-SecureVPN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C49BD587D0EDC15C7A573EC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SecureVPN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA087AFAC5134939839C6D65 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SecureVPN/Pods-SecureVPN-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SecureVPN/Pods-SecureVPN-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SecureVPN/Pods-SecureVPN-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11C0A0C62BAAE86F0081889F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11C0A1722BAAF02F0081889F /* SVMapInfoView.m in Sources */,
+				11C0A1662BAAF02F0081889F /* BHBNetworkSpeed.m in Sources */,
+				11C0A1972BAAFDC70081889F /* SecureVPN.xcdatamodeld in Sources */,
+				11C0A1772BAAF02F0081889F /* SVBaseNC.m in Sources */,
+				11C0A1702BAAF02F0081889F /* SVHomeBarView.m in Sources */,
+				11C0A15D2BAAF02F0081889F /* SVHomeVC.m in Sources */,
+				11C0A1632BAAF02F0081889F /* SVServerModel.m in Sources */,
+				11C0A1742BAAF02F0081889F /* SVSecurePrivacyPop.m in Sources */,
+				11C0A1752BAAF02F0081889F /* NSObject+SV.m in Sources */,
+				11C0A10A2BAAF00D0081889F /* SVPosterManager.m in Sources */,
+				11C0A1792BAAF0300081889F /* SVNavigationView.m in Sources */,
+				11C0A10B2BAAF00D0081889F /* SVPosterModel.m in Sources */,
+				11C0A17C2BAAF0300081889F /* UIButton+SV.m in Sources */,
+				11C0A16E2BAAF02F0081889F /* SVNProfile.m in Sources */,
+				11C0A1652BAAF02F0081889F /* SVPoolManager.m in Sources */,
+				11C0A16A2BAAF02F0081889F /* SVTools.m in Sources */,
+				11C0A1672BAAF02F0081889F /* LottieTools.swift in Sources */,
+				11C0A10C2BAAF00D0081889F /* SVStatisticAnalysis.m in Sources */,
+				11C0A1612BAAF02F0081889F /* SVWebVC.m in Sources */,
+				11C0A15C2BAAF02F0081889F /* SVConnectResultVC.m in Sources */,
+				11C0A15F2BAAF02F0081889F /* SVMapVC.m in Sources */,
+				11C0A1602BAAF02F0081889F /* SVServerVC.m in Sources */,
+				11C0A1082BAAF00D0081889F /* SVAdInfoModel.m in Sources */,
+				11C0A1712BAAF02F0081889F /* SVHomePop.m in Sources */,
+				11C0A1092BAAF00D0081889F /* SVFbHandle.m in Sources */,
+				11C0A17D2BAAF0300081889F /* UIView+SV.m in Sources */,
+				11C0A16C2BAAF02F0081889F /* SVNLog.m in Sources */,
+				11C0A1622BAAF02F0081889F /* SVNetInfoModel.m in Sources */,
+				11C0A15B2BAAF02F0081889F /* SVBrowserVC.m in Sources */,
+				11C0A1692BAAF02F0081889F /* Reachability.m in Sources */,
+				11C0A16F2BAAF02F0081889F /* SVNTools.m in Sources */,
+				11C0A1782BAAF0300081889F /* SVBaseVC.m in Sources */,
+				11C0A1642BAAF02F0081889F /* SVDbAdvertHandle.m in Sources */,
+				11C0A1732BAAF02F0081889F /* SVPop.m in Sources */,
+				11C0A16D2BAAF02F0081889F /* SVNManager.m in Sources */,
+				11C0A0CF2BAAE86F0081889F /* AppDelegate.m in Sources */,
+				11C0A1852BAAF0510081889F /* SVLaunchManager.m in Sources */,
+				11C0A0E02BAAE8700081889F /* main.m in Sources */,
+				11C0A0D22BAAE86F0081889F /* SceneDelegate.m in Sources */,
+				11C0A15E2BAAF02F0081889F /* SVLaunchVC.m in Sources */,
+				11C0A17A2BAAF0300081889F /* SVTextField.m in Sources */,
+				11C0A17B2BAAF0300081889F /* SVUITools.m in Sources */,
+				11C0A1762BAAF02F0081889F /* NSString+SV.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11C0A0E62BAAED460081889F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11C0A18B2BAAF3B30081889F /* SVNLog.m in Sources */,
+				11C0A0F12BAAED460081889F /* PacketTunnelProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11C0A0F52BAAED460081889F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11C0A0E92BAAED460081889F /* Tunnel */;
+			targetProxy = 11C0A0F42BAAED460081889F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		11C0A0DB2BAAE8700081889F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11C0A0DC2BAAE8700081889F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11C0A0E12BAAE8700081889F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		11C0A0E22BAAE8700081889F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11C0A0E42BAAE8700081889F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7390584FB91C50A368F913E /* Pods-SecureVPN.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SecureVPN/SecureVPN.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = W28DYWPRN7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SecureVPN/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Secure VPN";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.secure.protocol.zfzb;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		11C0A0E52BAAE8700081889F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FE5D2B2F6F0B9E18CDE3CCB /* Pods-SecureVPN.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SecureVPN/SecureVPN.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = W28DYWPRN7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SecureVPN/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Secure VPN";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.secure.protocol.zfzb;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		11C0A0F82BAAED460081889F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FBC1A4333FEB7FDCAF36AAD /* Pods-Tunnel.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Tunnel/Tunnel.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = W28DYWPRN7;
+				GCC_PREFIX_HEADER = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Tunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.secure.protocol.zfzb.Tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		11C0A0F92BAAED460081889F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3327226960670F9A5832470 /* Pods-Tunnel.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Tunnel/Tunnel.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = W28DYWPRN7;
+				GCC_PREFIX_HEADER = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Tunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.secure.protocol.zfzb.Tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11C0A0C52BAAE86F0081889F /* Build configuration list for PBXProject "SecureVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11C0A0E12BAAE8700081889F /* Debug */,
+				11C0A0E22BAAE8700081889F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11C0A0E32BAAE8700081889F /* Build configuration list for PBXNativeTarget "SecureVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11C0A0E42BAAE8700081889F /* Debug */,
+				11C0A0E52BAAE8700081889F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11C0A0F72BAAED460081889F /* Build configuration list for PBXNativeTarget "Tunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11C0A0F82BAAED460081889F /* Debug */,
+				11C0A0F92BAAED460081889F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		11C0A1952BAAFDC70081889F /* SecureVPN.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				11C0A1962BAAFDC70081889F /* SecureVPN.xcdatamodel */,
+			);
+			currentVersion = 11C0A1962BAAFDC70081889F /* SecureVPN.xcdatamodel */;
+			name = SecureVPN.xcdatamodeld;
+			path = "/Users/ssss/Desktop/work/Secure VPN/SecureVPN/SecureVPN/SecureVPN.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 11C0A0C22BAAE86F0081889F /* Project object */;
+}

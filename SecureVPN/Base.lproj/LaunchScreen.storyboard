@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_bg" translatesAutoresizingMaskIntoConstraints="NO" id="2Di-BS-82e">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_logo" translatesAutoresizingMaskIntoConstraints="NO" id="xJB-3v-XKm">
+                                <rect key="frame" x="136.66666666666666" y="175" width="119.99999999999997" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="7St-Lv-Dzf"/>
+                                    <constraint firstAttribute="width" constant="120" id="ixT-pl-lUZ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_secure_vpn" translatesAutoresizingMaskIntoConstraints="NO" id="Rdn-0H-ICC">
+                                <rect key="frame" x="73.666666666666686" y="325" width="246" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="CbB-tW-S1y"/>
+                                    <constraint firstAttribute="width" constant="246" id="JGr-h3-QjN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xJB-3v-XKm" firstAttribute="centerX" secondItem="2Di-BS-82e" secondAttribute="centerX" id="IUf-QO-6KU"/>
+                            <constraint firstItem="2Di-BS-82e" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Yq6-gZ-Awv"/>
+                            <constraint firstAttribute="trailing" secondItem="2Di-BS-82e" secondAttribute="trailing" id="ej3-dV-Qck"/>
+                            <constraint firstItem="xJB-3v-XKm" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="175" id="gr9-AV-CuH"/>
+                            <constraint firstItem="2Di-BS-82e" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="mnR-Qa-lhG"/>
+                            <constraint firstItem="Rdn-0H-ICC" firstAttribute="centerX" secondItem="2Di-BS-82e" secondAttribute="centerX" id="pke-Rq-HQ7"/>
+                            <constraint firstItem="Rdn-0H-ICC" firstAttribute="top" secondItem="xJB-3v-XKm" secondAttribute="bottom" constant="30" id="wnB-41-2WS"/>
+                            <constraint firstAttribute="bottom" secondItem="2Di-BS-82e" secondAttribute="bottom" id="xtm-4i-kZx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launch_bg" width="414" height="896"/>
+        <image name="launch_logo" width="120" height="120"/>
+        <image name="launch_secure_vpn" width="246" height="27"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

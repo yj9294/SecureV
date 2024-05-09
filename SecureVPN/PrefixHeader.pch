@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  SecureVPN
+//
+//  Created by  securevpn on 2024/1/4.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+#import "SVStatisticAnalysis.h"
+#define NSLog(...) {}
+#define svdispatch_async_main_safe(block)\
+if ([NSThread isMainThread]) {\
+block();\
+} else {\
+dispatch_async(dispatch_get_main_queue(), block);\
+}
+
+#endif
+#endif /* PrefixHeader_pch */
