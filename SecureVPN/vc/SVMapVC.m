@@ -170,9 +170,6 @@
     
     nativeAd.delegate = self;
     self.nativeAd = nativeAd;
-    self.nativeAd.paidEventHandler = ^(GADAdValue * _Nonnull value) {
-        [[SVPosterManager sharedInstance] paidAdWithValue:value];
-    };
     GADNativeAdView *nativeAdView = [[NSBundle mainBundle] loadNibNamed:@"NativeAdView" owner:nil options:nil].firstObject;
     self.nativeAdView = nativeAdView;
     
@@ -246,6 +243,9 @@
 //1、
 - (void)nativeAdDidRecordImpression:(nonnull GADNativeAd *)nativeAd {
     [[SVPosterManager sharedInstance] setupCswWithType:SVAdvertLocationTypeMapNative];
+    self.nativeAd.paidEventHandler = ^(GADAdValue * _Nonnull value) {
+        [[SVPosterManager sharedInstance] paidAdWithValue:value];
+    };
 }
 
 //点击

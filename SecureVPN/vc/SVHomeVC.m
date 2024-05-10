@@ -19,6 +19,9 @@
 #import "SVConnectResultVC.h"
 #import "BHBNetworkSpeed.h"
 #import "SVPosterManager.h"
+#import "SVFirebase.h"
+#import "SecureVPN-Swift.h"
+#import "SVFbHandle.h"
 
 typedef NS_ENUM(NSUInteger, SVHomeVNStatus) {
     SVHomeVNStatusDisconnected = 0,
@@ -45,6 +48,8 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
 @property (nonatomic, assign) SVHomeVNStatus vnStatus;
 @property (nonatomic, strong) NSTimer *connectTimer;
 @property (nonatomic, assign) NSUInteger connectDuration;
+@property (nonatomic, strong) UIView *guideView;
+@property (nonatomic, strong) LottieAnimationView *lottieView;
 //打开vpn时是否需要展示广告，防止vpn状态多次变成已连接，导致广告多次加载
 @property (nonatomic, assign) BOOL isNeedShowVpnAd;
 //控制是否显示结果页面
@@ -61,6 +66,8 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
 @property (nonatomic, strong, nullable) GADNativeAdView *nativeAdView;
 @property (nonatomic, strong, nullable) GADNativeAd *nativeAd;
 @property (nonatomic, assign) SVHomeJumpType jumpType;
+
+@property (nonatomic, assign) BOOL isGuide;
 
 @end
 
@@ -264,6 +271,59 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
     }
 }
 
+- (UIView *) guideView {
+    if (!_guideView) {
+        _guideView = [[UIView alloc] init];
+        _guideView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
+    }
+    return _guideView;
+}
+
+- (LottieAnimationView *)lottieView {
+    if (!_lottieView) {
+        _lottieView = [LottieTools getLottieViewWith:@"home_guide" count:-1];
+    }
+    return _lottieView;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self layoutLottieView];
+}
+
+- (void)layoutLottieView {
+    
+    if (!_isGuide) {
+        return;
+    }
+    
+    NEVPNStatus status = [SVNManager sharedInstance].vnStatus;
+    if (status != NEVPNStatusDisconnected || status == NEVPNStatusInvalid) {
+        [self.view addSubview:self.guideView];
+        [self.guideView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.left.right.bottom.equalTo(self.view);
+        }];
+        
+        UIView *view = (UIView *)self.lottieView;
+        [self.guideView addSubview:view];
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self.guideView);
+        }];
+        
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btn addTarget:self action:@selector(vnAction) forControlEvents:UIControlEventTouchUpInside];
+        [self.guideView addSubview:btn];
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.left.right.bottom.equalTo(self.guideView);
+        }];
+        
+        [LottieTools playWithAnView:self.lottieView];
+    } else {
+        [self.guideView removeFromSuperview];
+        [LottieTools stopWithAnView:self.lottieView];
+    }
+}
+
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
@@ -360,7 +420,8 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
                     weakSelf.isNeedShowVpnAd = NO;
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                         weakSelf.isVpnOpen = YES;
-                        [weakSelf showVpnAdWithIsOpen:YES];
+//                        [weakSelf showVpnAdWithIsOpen:YES];
+                        [weakSelf showVpnConnectWithPreloadAll:YES];
                     });
                 } else {
                     if (self.isShowResult) {
@@ -436,6 +497,8 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
 }
 
 - (void)configreServerInfo {
+    // 冷启动的时候不进行引导 就自动链接 不展示引导动画
+    _isGuide = YES;
     //判断是否有连接或者正在连接的ip
     NEVPNStatus status = [SVNManager sharedInstance].vnStatus;
     if (status == NEVPNStatusDisconnected || status == NEVPNStatusInvalid) {
@@ -449,7 +512,11 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
         if (string.length == 0){
             [[NSUserDefaults standardUserDefaults] setObject:@"firstEnterHome" forKey:@"firstEnterHome"];
             [[NSUserDefaults standardUserDefaults] synchronize];
-            [self vnAction];
+            // 如果是激进模式就自动链接
+            NSString *userModel = [SVFirebase getAppMode];
+            if (![userModel isEqualToString:@"bs"]) {
+                [self vnAction];
+            }
         }
     } else {
         //获取ip
@@ -534,13 +601,18 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
 }
 
 - (void)vnAction {
+    // 停止引导
+    [self.guideView removeFromSuperview];
+    [LottieTools stopWithAnView:self.lottieView];
+    
     SVHomeVNStatus status = self.vnStatus;
     if (status == SVHomeVNStatusConnected) {
         [SVStatisticAnalysis saveEvent:@"start_disconnect" params:nil];
         [self updateUIWithStatus:SVHomeVNStatusLoading];
         self.isVpnOpen = NO;
         self.isNeedDisconnect = YES;
-        [self showVpnAdWithIsOpen:NO];
+//        [self showVpnAdWithIsOpen:NO];
+        [self showVpnConnectWithPreloadAll:NO];
         [[SVPosterManager sharedInstance] tripVpn];
     } else if (status == SVHomeVNStatusDisconnected) {
         self.isNeedShowVpnAd = YES;
@@ -613,6 +685,48 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
     }
 }
 
+- (void)showVpnConnectWithPreloadAll: (BOOL)isOpen {
+    SVPosterManager *manager = [SVPosterManager sharedInstance];
+    SVAdvertLocationType type = SVAdvertLocationTypeVpn;
+    if ([manager isCanShowAdvertWithType:type]) {
+        if (manager.vpnInterstitial && [manager isCacheValidWithType:type]) {
+            if (manager.isScreenAdShow) {
+                [self updateVnUIWithIsOpen:isOpen];
+                return;
+            }
+            manager.isScreenAdShow = YES;
+            [self showVpnAd];
+        } else {
+            [manager resetAd];
+            NSArray *types = [NSArray arrayWithObjects: @(SVAdvertLocationTypeLaunch), @(SVAdvertLocationTypeVpn), @(SVAdvertLocationTypeClick), @(SVAdvertLocationTypeBack), @(SVAdvertLocationTypeHomeNative), (SVAdvertLocationTypeResultNative), @(SVAdvertLocationTypeMapNative), nil];
+            dispatch_group_t group = dispatch_group_create();
+            [types enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                dispatch_group_enter(group);
+                __weak typeof(self) weakSelf = self;
+                [manager syncRequestScreenAdWithType:type timeout:10 complete:^(BOOL isSuccess) {
+                    dispatch_group_leave(group);
+                }];
+            }];
+
+            dispatch_group_wait(group, DISPATCH_TIME_NOW + 10 * NSEC_PER_SEC);
+            dispatch_group_notify(group, dispatch_get_global_queue(0, 0), ^{
+                if (manager.vpnInterstitial && [manager isCacheValidWithType:type]) {
+                    if (manager.isScreenAdShow) {
+                        [self updateVnUIWithIsOpen:isOpen];
+                        return;
+                    }
+                    manager.isScreenAdShow = YES;
+                    [self showVpnAd];
+                } else {
+                    [self updateVnUIWithIsOpen:isOpen];
+                }
+            });
+        }
+    } else {
+        [self updateVnUIWithIsOpen:isOpen];
+    }
+}
+
 - (void)showVpnAd {
     [SVStatisticAnalysis saveEvent:@"scene_conn" params:nil];
     SVPosterManager *manager = [SVPosterManager sharedInstance];
@@ -679,9 +793,6 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
     
     nativeAd.delegate = self;
     self.nativeAd = nativeAd;
-    self.nativeAd.paidEventHandler = ^(GADAdValue * _Nonnull value) {
-        [[SVPosterManager sharedInstance] paidAdWithValue:value];
-    };
     GADNativeAdView *nativeAdView = [[NSBundle mainBundle] loadNibNamed:@"NativeAdView" owner:nil options:nil].firstObject;
     self.nativeAdView = nativeAdView;
     
@@ -732,6 +843,9 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
 //1、
 - (void)nativeAdDidRecordImpression:(nonnull GADNativeAd *)nativeAd {
     [[SVPosterManager sharedInstance] setupCswWithType:SVAdvertLocationTypeHomeNative];
+    self.nativeAd.paidEventHandler = ^(GADAdValue * _Nonnull value) {
+        [[SVPosterManager sharedInstance] paidAdWithValue:value];
+    };
 }
 
 //点击

@@ -66,6 +66,19 @@
         [[SVLaunchManager shared] gotoUpstage];
         [weakSelf endTask];
     }];
+    
+    UIViewController *vc = self.window.rootViewController;
+    if ([vc presentedViewController]) {
+        UIViewController *presentedVC = [vc presentedViewController];
+        if ([presentedVC presentedViewController]) {
+            UIViewController *ppVC = [presentedVC presentedViewController];
+            [ppVC dismissViewControllerAnimated:YES completion:^{
+                [presentedVC dismissViewControllerAnimated:YES completion:nil];
+            }];
+            return;
+        }
+        [presentedVC dismissViewControllerAnimated:true completion:nil];
+    }
 }
 
 - (void)endTask {

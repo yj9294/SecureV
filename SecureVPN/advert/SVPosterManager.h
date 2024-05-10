@@ -67,6 +67,7 @@ typedef NS_ENUM(NSUInteger, SVPrintType) {
 
 - (void)resetAdLoad;
 - (BOOL)resetAdShow;
+- (void)resetAd;
 
 - (nullable SVPosterModel *)getAdvertModelWithType:(SVAdvertLocationType)type;
 - (void)paidAdWithValue:(GADAdValue *)value;

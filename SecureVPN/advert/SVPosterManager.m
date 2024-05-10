@@ -11,6 +11,7 @@
 #import "SVBaseVC.h"
 #import "SVNManager.h"
 #import <FirebaseAnalytics/FIRParameterNames.h>
+#import <FirebaseAnalytics/FIRAnalytics.h>
 #import <FBSDKCoreKit/FBSDKAppEvents.h>
 
 
@@ -236,6 +237,10 @@
     double realValue = [value.value doubleValue];
     
     [FBSDKAppEvents.shared logPurchase:realValue currency:value.currencyCode];
+    
+    // firebase
+    int price = realValue * 1000000;
+    [FIRAnalytics logEventWithName:@"upload_revenue" parameters:[NSDictionary dictionaryWithObjectsAndKeys:@(price), @"price", value.currencyCode, @"currency",nil]];
         
     if ([SVNManager sharedInstance].vnStatus == NEVPNStatusConnected) {
         [SVNTools uploadVpnAdPurchaseWithIp:[SVNManager sharedInstance].profile.serverAddress purchase:realValue];
@@ -838,6 +843,15 @@
         }
     }
     return YES;
+}
+
+- (void)resetAd {
+    self.vpnModel.tld = [[NSDate date] timeIntervalSince1970] - 4000;
+    self.clickModel.tld = [[NSDate date] timeIntervalSince1970] - 4000;
+    self.backModel.tld = [[NSDate date] timeIntervalSince1970] - 4000;
+    self.homeNativeModel.tld = [[NSDate date] timeIntervalSince1970] - 4000;
+    self.resultNativeModel.tld = [[NSDate date] timeIntervalSince1970] - 4000;
+    self.mapNativeModel.tld = [[NSDate date] timeIntervalSince1970] - 4000;
 }
 
 - (void)resetAdLoad {

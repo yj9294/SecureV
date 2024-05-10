@@ -280,9 +280,6 @@ NSNotificationName const SVRetryConnectNoto = @"SVRetryConnectNoto";
     
     nativeAd.delegate = self;
     self.nativeAd = nativeAd;
-    self.nativeAd.paidEventHandler = ^(GADAdValue * _Nonnull value) {
-        [[SVPosterManager sharedInstance] paidAdWithValue:value];
-    };
     GADNativeAdView *nativeAdView = [[NSBundle mainBundle] loadNibNamed:@"NativeAdView" owner:nil options:nil].firstObject;
     self.nativeAdView = nativeAdView;
     
@@ -392,6 +389,9 @@ NSNotificationName const SVRetryConnectNoto = @"SVRetryConnectNoto";
 //1、
 - (void)nativeAdDidRecordImpression:(nonnull GADNativeAd *)nativeAd {
     [[SVPosterManager sharedInstance] setupCswWithType:SVAdvertLocationTypeResultNative];
+    self.nativeAd.paidEventHandler = ^(GADAdValue * _Nonnull value) {
+        [[SVPosterManager sharedInstance] paidAdWithValue:value];
+    };
 }
 
 //点击
