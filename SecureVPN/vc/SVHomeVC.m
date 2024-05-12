@@ -726,9 +726,13 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
                     return;
                 }
                 manager.isScreenAdShow = YES;
-                [self showVpnAd];
+                svdispatch_async_main_safe(^{
+                    [self showVpnAd];
+                })
             } else {
-                [self updateVnUIWithIsOpen:isOpen];
+                svdispatch_async_main_safe(^{
+                    [self updateVnUIWithIsOpen:isOpen];
+                })
             }
         });
     } else {
