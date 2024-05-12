@@ -19,7 +19,6 @@
 #import "SVConnectResultVC.h"
 #import "BHBNetworkSpeed.h"
 #import "SVPosterManager.h"
-#import "SVFirebase.h"
 #import "SecureVPN-Swift.h"
 #import "SVFbHandle.h"
 
@@ -269,36 +268,37 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
             }
         }];
     }
+    
+    [self layoutLottieView];
 }
 
 - (UIView *) guideView {
     if (!_guideView) {
         _guideView = [[UIView alloc] init];
-        _guideView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
+        _guideView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.75];
     }
     return _guideView;
 }
 
 - (LottieAnimationView *)lottieView {
     if (!_lottieView) {
-        _lottieView = [LottieTools getLottieViewWith:@"home_guide" count:-1];
+        _lottieView = [LottieTools getLottieViewWith:@"data" count:-1];
     }
     return _lottieView;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self layoutLottieView];
 }
 
 - (void)layoutLottieView {
     
-    if (!_isGuide) {
+    if (!_isGuide && ![[SVFirebase getAppMode] isEqualToString:@"bs"]) {
         return;
     }
     
     NEVPNStatus status = [SVNManager sharedInstance].vnStatus;
-    if (status != NEVPNStatusDisconnected || status == NEVPNStatusInvalid) {
+    if (status == NEVPNStatusDisconnected || status == NEVPNStatusInvalid) {
         [self.view addSubview:self.guideView];
         [self.guideView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.right.bottom.equalTo(self.view);
@@ -308,6 +308,7 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
         [self.guideView addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(self.guideView);
+            make.width.height.equalTo(@300);
         }];
         
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -512,11 +513,11 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
         if (string.length == 0){
             [[NSUserDefaults standardUserDefaults] setObject:@"firstEnterHome" forKey:@"firstEnterHome"];
             [[NSUserDefaults standardUserDefaults] synchronize];
-            // 如果是激进模式就自动链接
-            NSString *userModel = [SVFirebase getAppMode];
-            if (![userModel isEqualToString:@"bs"]) {
-                [self vnAction];
-            }
+        }
+        // 如果是激进模式就自动链接
+        NSString *userModel = [SVFirebase getAppMode];
+        if (![userModel isEqualToString:@"bs"]) {
+            [self vnAction];
         }
     } else {
         //获取ip
@@ -689,39 +690,30 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
     SVPosterManager *manager = [SVPosterManager sharedInstance];
     SVAdvertLocationType type = SVAdvertLocationTypeVpn;
     if ([manager isCanShowAdvertWithType:type]) {
-        if (manager.vpnInterstitial && [manager isCacheValidWithType:type]) {
-            if (manager.isScreenAdShow) {
-                [self updateVnUIWithIsOpen:isOpen];
-                return;
-            }
-            manager.isScreenAdShow = YES;
-            [self showVpnAd];
-        } else {
-            [manager resetAd];
-            NSArray *types = [NSArray arrayWithObjects: @(SVAdvertLocationTypeLaunch), @(SVAdvertLocationTypeVpn), @(SVAdvertLocationTypeClick), @(SVAdvertLocationTypeBack), @(SVAdvertLocationTypeHomeNative), (SVAdvertLocationTypeResultNative), @(SVAdvertLocationTypeMapNative), nil];
-            dispatch_group_t group = dispatch_group_create();
-            [types enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                dispatch_group_enter(group);
-                __weak typeof(self) weakSelf = self;
-                [manager syncRequestScreenAdWithType:type timeout:10 complete:^(BOOL isSuccess) {
-                    dispatch_group_leave(group);
-                }];
+        [manager resetAd];
+        NSArray <NSNumber*> *types = [NSArray arrayWithObjects: @(SVAdvertLocationTypeLaunch), @(SVAdvertLocationTypeVpn), @(SVAdvertLocationTypeClick), @(SVAdvertLocationTypeBack), @(SVAdvertLocationTypeHomeNative), @(SVAdvertLocationTypeResultNative), @(SVAdvertLocationTypeMapNative), nil];
+        dispatch_group_t group = dispatch_group_create();
+        [types enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            dispatch_group_enter(group);
+            SVAdvertLocationType t = (SVAdvertLocationType)[obj intValue];
+            [manager syncRequestScreenAdWithType:t timeout:10 complete:^(BOOL isSuccess) {
+                dispatch_group_leave(group);
             }];
+        }];
 
-            dispatch_group_wait(group, DISPATCH_TIME_NOW + 10 * NSEC_PER_SEC);
-            dispatch_group_notify(group, dispatch_get_global_queue(0, 0), ^{
-                if (manager.vpnInterstitial && [manager isCacheValidWithType:type]) {
-                    if (manager.isScreenAdShow) {
-                        [self updateVnUIWithIsOpen:isOpen];
-                        return;
-                    }
-                    manager.isScreenAdShow = YES;
-                    [self showVpnAd];
-                } else {
+        dispatch_group_wait(group, DISPATCH_TIME_NOW + 10 * NSEC_PER_SEC);
+        dispatch_group_notify(group, dispatch_get_global_queue(0, 0), ^{
+            if (manager.vpnInterstitial && [manager isCacheValidWithType:type]) {
+                if (manager.isScreenAdShow) {
                     [self updateVnUIWithIsOpen:isOpen];
+                    return;
                 }
-            });
-        }
+                manager.isScreenAdShow = YES;
+                [self showVpnAd];
+            } else {
+                [self updateVnUIWithIsOpen:isOpen];
+            }
+        });
     } else {
         [self updateVnUIWithIsOpen:isOpen];
     }

@@ -129,7 +129,7 @@
 - (void)appInfoWithComplete:(void(^)(BOOL isSuccess, id config))complete {
     __weak typeof(self) weakSelf = self;
     [self.remoteInfo fetchWithExpirationDuration:10 completionHandler:^(FIRRemoteConfigFetchStatus status, NSError * _Nullable error) {
-        if (status != FIRRemoteConfigFetchAndActivateStatusSuccessFetchedFromRemote) {
+        if (status != FIRRemoteConfigFetchStatusSuccess) {
             NSLog(@"<Config> config fetch field:%@", error.localizedDescription);
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (complete) complete(NO, nil);

@@ -10,7 +10,7 @@
 
 #ifdef __OBJC__
 #import "SVStatisticAnalysis.h"
-#define NSLog(...) {}
+//#define NSLog(...) {}
 #define svdispatch_async_main_safe(block)\
 if ([NSThread isMainThread]) {\
 block();\

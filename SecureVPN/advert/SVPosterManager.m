@@ -239,8 +239,7 @@
     [FBSDKAppEvents.shared logPurchase:realValue currency:value.currencyCode];
     
     // firebase
-    int price = realValue * 1000000;
-    [FIRAnalytics logEventWithName:@"upload_revenue" parameters:[NSDictionary dictionaryWithObjectsAndKeys:@(price), @"price", value.currencyCode, @"currency",nil]];
+    [FIRAnalytics logEventWithName:@"upload_revenue" parameters:[NSDictionary dictionaryWithObjectsAndKeys:@(realValue), kFIRParameterValue, value.currencyCode, kFIRParameterCurrency,nil]];
         
     if ([SVNManager sharedInstance].vnStatus == NEVPNStatusConnected) {
         [SVNTools uploadVpnAdPurchaseWithIp:[SVNManager sharedInstance].profile.serverAddress purchase:realValue];
@@ -652,7 +651,7 @@
     }
     
     __weak typeof(self) weakSelf = self;
-    [GADAppOpenAd loadWithAdUnitID:adid request:[GADRequest request] orientation:UIInterfaceOrientationPortrait completionHandler:^(GADAppOpenAd *_Nullable appOpenAd, NSError *_Nullable error) {
+    [GADAppOpenAd loadWithAdUnitID:adid request:[GADRequest request] completionHandler:^(GADAppOpenAd *_Nullable appOpenAd, NSError *_Nullable error) {
         if (error) {
             [weakSelf printWithModel:model metaModel:ad logType:SVPrintTypeLoadFail extra:[NSString stringWithFormat:@"reason => %@", [error localizedDescription]]];
             if (complete) complete(nil);
