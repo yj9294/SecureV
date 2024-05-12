@@ -694,11 +694,28 @@ typedef NS_ENUM(NSUInteger, SVHomeJumpType) {
         NSArray <NSNumber*> *types = [NSArray arrayWithObjects: @(SVAdvertLocationTypeLaunch), @(SVAdvertLocationTypeVpn), @(SVAdvertLocationTypeClick), @(SVAdvertLocationTypeBack), @(SVAdvertLocationTypeHomeNative), @(SVAdvertLocationTypeResultNative), @(SVAdvertLocationTypeMapNative), nil];
         dispatch_group_t group = dispatch_group_create();
         [types enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            dispatch_group_enter(group);
             SVAdvertLocationType t = (SVAdvertLocationType)[obj intValue];
-            [manager syncRequestScreenAdWithType:t timeout:10 complete:^(BOOL isSuccess) {
-                dispatch_group_leave(group);
-            }];
+            switch (t) {
+                case SVAdvertLocationTypeLaunch:
+                case SVAdvertLocationTypeVpn:
+                case SVAdvertLocationTypeClick:
+                case SVAdvertLocationTypeBack: {
+                    dispatch_group_enter(group);
+                    [manager syncRequestScreenAdWithType:t timeout:10 complete:^(BOOL isSuccess) {
+                        dispatch_group_leave(group);
+                    }];
+                }break;
+                case SVAdvertLocationTypeHomeNative:
+                case SVAdvertLocationTypeResultNative:
+                case SVAdvertLocationTypeMapNative: {
+                    dispatch_group_enter(group);
+                    [manager syncRequestNativeAdWithType:t complete:^(BOOL isSuccess) {
+                        dispatch_group_leave(group);
+                    }];
+                }break;
+                case SVAdvertLocationTypeUnknow:
+                    break;
+            }
         }];
 
         dispatch_group_wait(group, DISPATCH_TIME_NOW + 10 * NSEC_PER_SEC);

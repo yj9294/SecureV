@@ -845,12 +845,23 @@
 }
 
 - (void)resetAd {
+    self.launchModel.tld = [[NSDate date] timeIntervalSince1970] - 4000;
     self.vpnModel.tld = [[NSDate date] timeIntervalSince1970] - 4000;
     self.clickModel.tld = [[NSDate date] timeIntervalSince1970] - 4000;
     self.backModel.tld = [[NSDate date] timeIntervalSince1970] - 4000;
     self.homeNativeModel.tld = [[NSDate date] timeIntervalSince1970] - 4000;
     self.resultNativeModel.tld = [[NSDate date] timeIntervalSince1970] - 4000;
     self.mapNativeModel.tld = [[NSDate date] timeIntervalSince1970] - 4000;
+    [self resetAdLoad];
+    self.launchModel.ild = false;
+    
+    self.launchModel.isw = false;
+    self.vpnModel.isw= false;
+    self.clickModel.isw = false;
+    self.backModel.isw = false;
+    self.homeNativeModel.isw = false;
+    self.resultNativeModel.isw = false;
+    self.mapNativeModel.isw = false;
 }
 
 - (void)resetAdLoad {
