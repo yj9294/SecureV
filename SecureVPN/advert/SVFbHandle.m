@@ -128,8 +128,8 @@
 
 - (void)appInfoWithComplete:(void(^)(BOOL isSuccess, id config))complete {
     __weak typeof(self) weakSelf = self;
-    [self.remoteInfo fetchWithExpirationDuration:10 completionHandler:^(FIRRemoteConfigFetchStatus status, NSError * _Nullable error) {
-        if (status != FIRRemoteConfigFetchStatusSuccess) {
+    [self.remoteInfo fetchAndActivateWithCompletionHandler:^(FIRRemoteConfigFetchAndActivateStatus status, NSError * _Nullable error) {
+        if (status != FIRRemoteConfigFetchAndActivateStatusSuccessFetchedFromRemote) {
             NSLog(@"<Config> config fetch field:%@", error.localizedDescription);
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (complete) complete(NO, nil);
@@ -138,6 +138,7 @@
             NSLog(@"<Config> config fetch field:%@", [weakSelf.remoteInfo allKeysFromSource:FIRRemoteConfigSourceRemote]);
             id obj = [[weakSelf.remoteInfo configValueForKey:@"adconfig"] JSONValue];
             [weakSelf setAppMode];
+            [weakSelf getVNModels];
 //            NSArray *array = [NSJSONSerialization JSONObjectWithData:obj options:NSJSONReadingMutableContainers error:nil];
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (complete) complete(YES, obj);

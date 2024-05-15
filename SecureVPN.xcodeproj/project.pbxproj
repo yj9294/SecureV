@@ -64,7 +64,6 @@
 		11C0A18B2BAAF3B30081889F /* SVNLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1882BAAF3B30081889F /* SVNLog.m */; };
 		11C0A1972BAAFDC70081889F /* SecureVPN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A1952BAAFDC70081889F /* SecureVPN.xcdatamodeld */; };
 		11C0A1A02BAB03250081889F /* remote_config_defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11C0A19F2BAB03250081889F /* remote_config_defaults.plist */; };
-		11C0A1A22BAB096F0081889F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 11C0A1A12BAB096F0081889F /* PrivacyInfo.xcprivacy */; };
 		2AF7097F26B7536E1C6EAC63 /* Pods_Tunnel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B2C75C35D2A5BE04296D65 /* Pods_Tunnel.framework */; };
 		A9140327EEFAA2FB30CBD4F3 /* Pods_SecureVPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56A7074A795987ADA782B18 /* Pods_SecureVPN.framework */; };
 /* End PBXBuildFile section */
@@ -98,6 +97,7 @@
 		11AEA0162BE0DEEB00B3BDAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		11B95B9F2BF0851C00516764 /* img_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_0.png; sourceTree = "<group>"; };
 		11B95BA12BF0851C00516764 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		11B95BA62BF4DFA500516764 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		11C0A0CA2BAAE86F0081889F /* SecureVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C0A0CD2BAAE86F0081889F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		11C0A0CE2BAAE86F0081889F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -206,7 +206,6 @@
 		11C0A1962BAAFDC70081889F /* SecureVPN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecureVPN.xcdatamodel; sourceTree = "<group>"; };
 		11C0A19E2BAB026E0081889F /* NEPacketTunnelFlow+TMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NEPacketTunnelFlow+TMExtension.h"; sourceTree = "<group>"; };
 		11C0A19F2BAB03250081889F /* remote_config_defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = remote_config_defaults.plist; sourceTree = "<group>"; };
-		11C0A1A12BAB096F0081889F /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		6FE5D2B2F6F0B9E18CDE3CCB /* Pods-SecureVPN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecureVPN.release.xcconfig"; path = "Target Support Files/Pods-SecureVPN/Pods-SecureVPN.release.xcconfig"; sourceTree = "<group>"; };
 		83B2C75C35D2A5BE04296D65 /* Pods_Tunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tunnel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBC1A4333FEB7FDCAF36AAD /* Pods-Tunnel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tunnel.debug.xcconfig"; path = "Target Support Files/Pods-Tunnel/Pods-Tunnel.debug.xcconfig"; sourceTree = "<group>"; };
@@ -282,7 +281,7 @@
 				11C0A1802BAAF0510081889F /* PrefixHeader.pch */,
 				11C0A17E2BAAF0510081889F /* SVLaunchManager.h */,
 				11C0A1822BAAF0510081889F /* SVLaunchManager.m */,
-				11C0A1A12BAB096F0081889F /* PrivacyInfo.xcprivacy */,
+				11B95BA62BF4DFA500516764 /* PrivacyInfo.xcprivacy */,
 				11C0A1252BAAF02F0081889F /* database */,
 				11C0A1202BAAF02F0081889F /* model */,
 				11C0A1302BAAF02F0081889F /* tool */,
@@ -575,7 +574,6 @@
 				11C0A1682BAAF02F0081889F /* NativeAdView.xib in Resources */,
 				11C0A0DD2BAAE8700081889F /* Base in Resources */,
 				11C0A16B2BAAF02F0081889F /* secure.ovpn in Resources */,
-				11C0A1A22BAB096F0081889F /* PrivacyInfo.xcprivacy in Resources */,
 				11B95BA22BF0851C00516764 /* img_0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -878,7 +876,7 @@
 				CODE_SIGN_ENTITLEMENTS = SecureVPN/SecureVPN.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20240510;
+				CURRENT_PROJECT_VERSION = 20240515;
 				DEVELOPMENT_TEAM = W28DYWPRN7;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
@@ -920,7 +918,7 @@
 				CODE_SIGN_ENTITLEMENTS = SecureVPN/SecureVPN.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20240510;
+				CURRENT_PROJECT_VERSION = 20240515;
 				DEVELOPMENT_TEAM = W28DYWPRN7;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
@@ -959,7 +957,7 @@
 				CODE_SIGN_ENTITLEMENTS = Tunnel/Tunnel.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20240510;
+				CURRENT_PROJECT_VERSION = 20240515;
 				DEVELOPMENT_TEAM = W28DYWPRN7;
 				GCC_PREFIX_HEADER = "";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -993,7 +991,7 @@
 				CODE_SIGN_ENTITLEMENTS = Tunnel/Tunnel.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20240510;
+				CURRENT_PROJECT_VERSION = 20240515;
 				DEVELOPMENT_TEAM = W28DYWPRN7;
 				GCC_PREFIX_HEADER = "";
 				GENERATE_INFOPLIST_FILE = YES;
