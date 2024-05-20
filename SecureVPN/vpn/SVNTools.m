@@ -241,7 +241,7 @@ typedef NS_ENUM(NSUInteger, SVNUploadStatus) {
     [self requestWithUrl:[NSString stringWithFormat:@"%@/%@", VN_BaseUrl, path] headers:headers params:params type:SVNUploadTypeShow];
 }
 
-+ (void)uploadVpnAdPurchaseWithIp:(NSString *)ip purchase:(double)purchase {
++ (void)uploadVpnAdPurchaseWithIp:(NSString *)ip purchase:(double)purchase currency:(NSString *)currency {
     NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
     NSString *version = [SVTools sv_getAppVersion];
     NSMutableDictionary *headers = [NSMutableDictionary dictionaryWithCapacity:2];
@@ -254,6 +254,7 @@ typedef NS_ENUM(NSUInteger, SVNUploadStatus) {
     [params setValue:@(cc) forKey:@"cc"];
     NSInteger time = [[NSDate date] timeIntervalSince1970];
     [params setValue:@(time) forKey:@"tt"];
+    [params setValue:currency forKey:@"cny"];
     
     NSString *path = @"cv/mab/";
     [self requestWithUrl:[NSString stringWithFormat:@"%@/%@", VN_BaseUrl, path] headers:headers params:params type:SVNUploadTypePurchase];

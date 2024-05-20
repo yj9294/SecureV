@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)randomIp;
 + (nullable SVServerModel *)randomServer;
 + (void)uploadVpnAdShowWithIp:(NSString *)ip;
-+ (void)uploadVpnAdPurchaseWithIp:(NSString *)ip purchase:(double)purchase;
++ (void)uploadVpnAdPurchaseWithIp:(NSString *)ip purchase:(double)purchase currency:(NSString *)currency;
 + (void)locationCoordinateWithComplete:(void(^)(BOOL isSuccess, SVNetInfoModel * _Nullable model))complete;
 + (void)getServerWithIp:(NSString *)ip complete:(void(^)(SVServerModel * _Nullable model))complete;
 

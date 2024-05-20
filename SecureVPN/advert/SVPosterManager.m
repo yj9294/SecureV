@@ -242,7 +242,7 @@
     [FIRAnalytics logEventWithName:@"upload_revenue" parameters:[NSDictionary dictionaryWithObjectsAndKeys:@(realValue), kFIRParameterValue, value.currencyCode, kFIRParameterCurrency,nil]];
         
     if ([SVNManager sharedInstance].vnStatus == NEVPNStatusConnected) {
-        [SVNTools uploadVpnAdPurchaseWithIp:[SVNManager sharedInstance].profile.serverAddress purchase:realValue];
+        [SVNTools uploadVpnAdPurchaseWithIp:[SVNManager sharedInstance].profile.serverAddress purchase:realValue currency:value.currencyCode];
     }
 }
 
