@@ -250,7 +250,7 @@ typedef NS_ENUM(NSUInteger, SVNUploadStatus) {
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:3];
     [params setValue:ip forKey:@"ip"];
-    NSInteger cc = purchase * 10000000;
+    NSInteger cc = purchase * 1000000;
     [params setValue:@(cc) forKey:@"cc"];
     NSInteger time = [[NSDate date] timeIntervalSince1970];
     [params setValue:@(time) forKey:@"tt"];
