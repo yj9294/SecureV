@@ -18,6 +18,7 @@
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "SVPosterManager.h"
+#import "advert/GoogleMobileAdsConsentManager.h"
 
 @interface SVLaunchManager () <GADFullScreenContentDelegate>
 
@@ -155,6 +156,13 @@
     SVLaunchVC *launch = [[SVLaunchVC alloc] init];
     [window setRootViewController:launch];
     [window makeKeyAndVisible];
+    
+    
+    [[GoogleMobileAdsConsentManager sharedInstance] gatherConsentFromConsentPresentationViewController:launch
+                                                                              consentGatheringComplete:^(NSError * _Nullable) {
+        
+    }];
+    
 }
 
 - (UIWindow *)getHomeWindow {

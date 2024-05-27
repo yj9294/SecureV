@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1199D0922BE0F38D00D75A53 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1199D0912BE0F38D00D75A53 /* AdSupport.framework */; };
 		11AEA0172BE0DEEB00B3BDAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11AEA0162BE0DEEB00B3BDAC /* GoogleService-Info.plist */; };
+		11B59EA22C0469A700162258 /* GoogleMobileAdsConsentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B59EA12C0469A700162258 /* GoogleMobileAdsConsentManager.m */; };
 		11B95BA22BF0851C00516764 /* img_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B95B9F2BF0851C00516764 /* img_0.png */; };
 		11B95BA32BF0851C00516764 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 11B95BA12BF0851C00516764 /* data.json */; };
 		11C0A0CF2BAAE86F0081889F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A0CE2BAAE86F0081889F /* AppDelegate.m */; };
@@ -95,6 +96,8 @@
 /* Begin PBXFileReference section */
 		1199D0912BE0F38D00D75A53 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		11AEA0162BE0DEEB00B3BDAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		11B59EA02C0469A700162258 /* GoogleMobileAdsConsentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleMobileAdsConsentManager.h; sourceTree = "<group>"; };
+		11B59EA12C0469A700162258 /* GoogleMobileAdsConsentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleMobileAdsConsentManager.m; sourceTree = "<group>"; };
 		11B95B9F2BF0851C00516764 /* img_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_0.png; sourceTree = "<group>"; };
 		11B95BA12BF0851C00516764 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		11B95BA62BF4DFA500516764 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -337,6 +340,8 @@
 				11C0A1042BAAF00D0081889F /* SVPosterModel.m */,
 				11C0A1052BAAF00D0081889F /* SVStatisticAnalysis.h */,
 				11C0A1062BAAF00D0081889F /* SVStatisticAnalysis.m */,
+				11B59EA02C0469A700162258 /* GoogleMobileAdsConsentManager.h */,
+				11B59EA12C0469A700162258 /* GoogleMobileAdsConsentManager.m */,
 			);
 			path = advert;
 			sourceTree = "<group>";
@@ -681,6 +686,7 @@
 				11C0A15D2BAAF02F0081889F /* SVHomeVC.m in Sources */,
 				11C0A1632BAAF02F0081889F /* SVServerModel.m in Sources */,
 				11C0A1742BAAF02F0081889F /* SVSecurePrivacyPop.m in Sources */,
+				11B59EA22C0469A700162258 /* GoogleMobileAdsConsentManager.m in Sources */,
 				11C0A1752BAAF02F0081889F /* NSObject+SV.m in Sources */,
 				11C0A10A2BAAF00D0081889F /* SVPosterManager.m in Sources */,
 				11C0A1792BAAF0300081889F /* SVNavigationView.m in Sources */,
@@ -876,13 +882,13 @@
 				CODE_SIGN_ENTITLEMENTS = SecureVPN/SecureVPN.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20240523;
+				CURRENT_PROJECT_VERSION = 20240527;
 				DEVELOPMENT_TEAM = W28DYWPRN7;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SecureVPN/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Secure VPN";
+				INFOPLIST_KEY_CFBundleDisplayName = "Secure Net";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -918,13 +924,13 @@
 				CODE_SIGN_ENTITLEMENTS = SecureVPN/SecureVPN.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20240523;
+				CURRENT_PROJECT_VERSION = 20240527;
 				DEVELOPMENT_TEAM = W28DYWPRN7;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SecureVPN/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Secure VPN";
+				INFOPLIST_KEY_CFBundleDisplayName = "Secure Net";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

@@ -49,7 +49,7 @@
     UIImageView *logoImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"privacy_logo"]];
     logoImageView.contentMode = UIViewContentModeScaleAspectFill;
     [topBgView addSubview:logoImageView];
-    NSString *message = @"    Thank you for using Secure VPN, We attach great importance to the protection of user personal information. Please read and understand the 《Privacy Policy》 in detail. If you agreed to all the contents of the policy, please click \"Agree\"";
+    NSString *message = @"    Thank you for using Secure Net, We attach great importance to the protection of user personal information. Please read and understand the 《Privacy Policy》 in detail. If you agreed to all the contents of the policy, please click \"Agree\"";
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
     paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
     paragraphStyle.lineSpacing = 4;

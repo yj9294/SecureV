@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSUserTrackingUsageDescription</key>
-	<string>Allow &quot; Secure VPN &quot; to use your IDFA?
+	<string>Allow &quot; Secure Net &quot; to use your IDFA?
 Advertising Tracking: We may use your IDFA to provide a personalized advertising experience, such as showing you ads relevant to your interests.
 Analytics: We may use your IDFA for application usage analysis to understand user behavior and trends to improve our services.</string>
 	<key>UIApplicationSceneManifest</key>
@@ -43,7 +43,7 @@ Analytics: We may use your IDFA for application usage analysis to understand use
 	<key>FacebookClientToken</key>
 	<string>995a69dbb942a316a7c02a9f5f337c92</string>
 	<key>FacebookDisplayName</key>
-	<string>Secure VPN</string>
+	<string>Secure Net</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-2291064933718395~8203761135</string>
 	<key>GADNativeAdValidatorEnabled</key>

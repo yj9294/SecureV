@@ -23,6 +23,7 @@
     [SVFirebase configreRemoteInfo];
     [FBSDKSettings sharedSettings].isAdvertiserIDCollectionEnabled = YES;
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    
     return YES;
 }
 
